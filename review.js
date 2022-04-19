@@ -697,8 +697,8 @@ const donutShop =[
     'chocolate',
     'blueberry'
   ],
-  [
-    ['orange', 'applecrumble'],
+  [                                          // donutShop[1]
+    ['orange', 'applecrumble'],              // donutShop[1][0]
     ['cream', 'peanutbutter', 'coconut']
   ],
   [
@@ -706,19 +706,20 @@ const donutShop =[
       [
         [
           ['flavor of the week']
-        ], ['ihatethis']
+        ], 
+        ['ihatethis']
       ]
     ]
   ]
 ]
 
 // Anthony wants applecrumble. Print please!
-console.log('Here\'s your ' + donutShop[1][0][1] + ' donut, Anthony.  That\'s ll be $12.99.')
+// console.log('Here\'s your ' + donutShop[1][0][1] + ' donut, Anthony.  That\'s ll be $1.99.')
 
 ////////////////////////////////////////////////////////////////////////////////////////
 
 // Tosi wants ihatethis. :) Print!
-console.log(donutShop[2][0][0][1][0] + ' is actually our most popular flavor, surpisingly.')
+// console.log(donutShop[2][0][0][1][0] + ' is actually our most popular flavor, surpisingly.')
 
 
 
@@ -734,28 +735,56 @@ console.log(donutShop[2][0][0][1][0] + ' is actually our most popular flavor, su
 // Teo is a person. I would hope so...
 // Check if Teo is a person. If true, print 'Teo is a person!' if not then print 'Teo is not a person!'
 
+
+
+
 const teo = "person"
 const gender = "male"
+const food = "hungry"
 if(teo === "person") {
-  console.log("Teo is a person!")
+  // console.log("Teo is a person!")
   if(gender === "male") {
-    console.log("You got this right!")
+    // console.log("You got this right!")
   }
   else {
-    console.log('Wrong, Teo is going to remove you from the class.')
+    // console.log('Wrong, Teo is going to remove you from the class.')
   }
+    if(food === "hungry") {
+      // console.log("Let\'s by Teo tacos!")
+      if(food !== "hungry") {
+        // console.log("He doesn\'t need to eat.")
+      }
+      else {
+        // console.log("If Teo is not hungry, am I hungry?")
+      }
+    }
 }
 else {
-  console.log("Teo is not a person!")
+  // console.log("Teo is not a person!")
 }
+
 
 
 
 
 // If Teo is a person, check to see if he is a male or a female. If male, print 'You got it right!' if not then print 'Wrong. Teo is going to remove you from the class.'.
+// Please see above for answer ^^^
 // If male, check to see if Teo is hungry. If Teo is 'hungry' then print 'Let's buy Teo some tacos!'. If Teo is 'not hungry' then print 'He doesn't need to eat.'. Anything else, print 'If Teo is not hungry, am I hungry?'
+// please see above for answer ^^^
+
+////////////////////////////////////////////////////////////
 
 // Create a if/else ternary to check if Gustavo is the coolest. If coolest, print 'You got that right!', else print 'James wants to argue. He says he's the best!'
+
+let gustavo = 'coolest'
+
+if(gustavo === 'coolest') {
+  // console.log('You got that right!')
+}
+else {
+  // console.log('James wants to argue.  He says he\'s the best')
+}
+
 
 ///////////////////////////////////////////////////////
 // ================================================= //
@@ -765,17 +794,56 @@ else {
 
 // Don't forget to call your functions :)
 
-// Create a function called sayGreeting and PRINT 'Hello, ma'amsir!'
+// Create a function called sayGreeting and PRINT 'Hello, ma'am/sir!'
+
+// let = sayGreeting = function() {
+//   console.log('Hello, ma\'am!')
+// }
+// sayGreeting()
 
 
-
+// ????????????????????????????????????????????????????????????
 // Create a function that takes a string as a parameter. PRINT 'This is my (STRING)'. Please replace the (STRING) with the parameter. Don't play with me haha.
+// let str = function('This is my (STRING)') {
+//   console.log(str)
+//   str.replace('(STRING)', '(Don\'t place with me haha.)')
+//   console.log(str)
+// }
+// str()
+// ???????????????????????????????????????????????????????????
+
+// function toAparameter(some_string) {
+//   console.log("This is my" + some_string);
+// };
+// let some_string = "any string";
+// toAparameter(some_string);
+
+function str(replacement) {
+  console.log(`This is my ${replacement}`)
+}
+let replacement = "Dont\'t play with me haha."
+// str(replacement)
 
 
 
 // Create a function called add that takes in three number parameters. Create 3 variables and assign numerical values to them. Invoke your add() and pass in those three variables as arguments.
+function add(one, two, three) {
+  console.log(`${one}, ${two}, ${three}`)
+}
+// add('1', '2', '3')
 
 
+// Order matters example
+// function printName(firstName, lastName) {
+//     // concatenation
+//     console.log("Hi my name is " + firstName + ' ' + lastName)  // concatenation
+//
+//     // interpolation with template literals
+//     console.log(`Hi my name is ${firstName} ${lastName}`)  // interpolation
+// }
+// printName('Teo', 'Marcelo')
+
+//
 
 // Create a function called fightClub() that accepts a name parameter.  If the name:
 // 'Teo' RETURN '1st rule: You do not talk about Fight Club.'
@@ -784,17 +852,122 @@ else {
 // 'Devin' RETURN '4th rule: Only two guys to a fight.'
 // Anything else, RETURN 'No shirts
 
+function fightClub(name) {
+  if (name === 'Teo') {
+    return 'You do not talk about Fight Club.'
+  }
+  else if (name === 'Manara') {
+    return 'YOU DO NOT TALK ABOUT FIGHT CLUB.'
+  }
+  else if (name === 'Liv') {
+    return 'If someone yells "Stop!", goes limp, taps out, the fight is over.'
+  }
+  else if (name === 'Devin') {
+    return 'Only two guys to a fight.'
+  }
+  else {
+    return 'No shrits'
+  }
+}
+// console.log(fightClub('Teo'))
+// console.log(fightClub('Namara'))
+// console.log(fightClub('Liv'))
+// console.log(fightClub('Devin'))
+// console.log(fightClub('Ken'))
+
 
 
 // Create a function called hello() that prints 'Hello'. Return an anonymous function inside hello() and have it print 'Goodbye'. Invoke your hello function in some way to see Hello and Goodbye in the console.
+function hello() {
+  console.log("hello");
+  (function () {
+    console.log('Goodbye')
+  })()
+}
+hello()
+
+
+// OR
+
+
+// ARROW FUNCTION WITH NESTED FUNCTION
+// function hello() {
+//   console.log("Hello")
+//   return () => {
+//     console.log("Goodbye")
+//   }
+// }
+// hello()
+//   ()
+
+// console.log(hello())
+
+// function hello() {
+//   console.log("hello");
+//   (function () {
+//     console.log('Goodbye')
+//   })()
+// }
+// hello()
+
+/////////////
+// EXAMPLE //
+// function declaration - RETURN
+function sayAge() {
+  return 'I am 99 years old!'
+}
+
+// console.log(sayAge())
+
+// Assigning age with the function sayAge()
+const age = sayAge()
+// console.log(age)
 
 
 
 // Create a function expression with your first name as the variable and then print your first and last name
+let firstName = function() {
+  return 'firstName' 
+}
+// console.log('Ken', 'Nguyen')
 
 
 
 // Create an arrow function that accepts a number and have it return that number doubled
+const num = () => {
+  return num * 2
+}
+// console.log(num(2))
+
+
+// ========== ARROW FUNCTIONS ===========
+
+// MDN Doc: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+
+// WARNING: DON'T ASK ABOUT THIS OR SUPER YET. Just planting seeds...
+// When to use, use it anytime to replace a function, HOWEVER, it is not recommended to use it inside objects. Reason: Arrow functions don't have their own bindings to 'this' or 'super', and should not be used as methods.
+
+// Arrow functions came out in ES6. They provide a more concise syntax, and allows implicit return of a single expression.
+
+// Anonymous function means a function without a name. Same as above, we are assigning a value of this anonymous function to goodbye
+// const goodbye = () => {
+//   console.log('goodbye')
+// }
+
+// goodbye()
+
+// IMPLICIT RETURN
+// const goodbye = () => console.log('hello Rahel')
+
+// goodbye()
+
+// Why use const for our arrow functions?
+// To avoid having to erase the function's functionality
+// let goodbye = () => console.log('goodbye')
+// goodbye = 'hi'
+
+// goodbye()
+
 
 /////////////////////////////////////////////////////////////////////////////
 
@@ -836,7 +1009,7 @@ const bulbasaur = {
 }
 
 // Print overgrow
-
+// console.log()
 
 
 // Print cut
