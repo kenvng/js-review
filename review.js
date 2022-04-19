@@ -884,7 +884,7 @@ function hello() {
     console.log('Goodbye')
   })()
 }
-hello()
+// hello()
 
 
 // OR
@@ -920,7 +920,7 @@ function sayAge() {
 // console.log(sayAge())
 
 // Assigning age with the function sayAge()
-const age = sayAge()
+// const age = sayAge()
 // console.log(age)
 
 
@@ -932,41 +932,17 @@ let firstName = function() {
 // console.log('Ken', 'Nguyen')
 
 
-
-// Create an arrow function that accepts a number and have it return that number doubled
-const num = () => {
-  return num * 2
-}
-// console.log(num(2))
-
-
 // ========== ARROW FUNCTIONS ===========
-
-// MDN Doc: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
-
-// WARNING: DON'T ASK ABOUT THIS OR SUPER YET. Just planting seeds...
-// When to use, use it anytime to replace a function, HOWEVER, it is not recommended to use it inside objects. Reason: Arrow functions don't have their own bindings to 'this' or 'super', and should not be used as methods.
-
-// Arrow functions came out in ES6. They provide a more concise syntax, and allows implicit return of a single expression.
-
-// Anonymous function means a function without a name. Same as above, we are assigning a value of this anonymous function to goodbye
-// const goodbye = () => {
-//   console.log('goodbye')
+// Create an arrow function that accepts a number and have it return that number doubled
+// const doubleNum = (num) => {
+//   return num * 2
 // }
+// console.log(doubleNum(2))
 
-// goodbye()
+// OR
 
-// IMPLICIT RETURN
-// const goodbye = () => console.log('hello Rahel')
-
-// goodbye()
-
-// Why use const for our arrow functions?
-// To avoid having to erase the function's functionality
-// let goodbye = () => console.log('goodbye')
-// goodbye = 'hi'
-
-// goodbye()
+// const doubleNum = (num) => num * 2 
+// console.log(doubleNum(2))
 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -978,18 +954,20 @@ const num = () => {
 ///////////////////////////////////////////////////////
 
 // Create an object and call it human. Add a name, age, and location property. Give the properties values.
-
-
+const human = {
+  name: 'Ken',
+  age: '40',
+  location: 'Hanson'
+}
 
 // Access the name using dot notation
-
-
+// console.log(human.name)
 
 // Access the age using square brackets
-
-
+// console.log(human['age'])
 
 // Use object destructuring to access location
+const {name, age, location} = human
 
 // ACCESS Granted
 const bulbasaur = {
@@ -1009,35 +987,35 @@ const bulbasaur = {
 }
 
 // Print overgrow
-// console.log()
-
+// console.log(bulbasaur.abilities[0].ability)
 
 // Print cut
-
-
+// console.log(bulbasaur.moves[bulbasaur.moves.indexOf('cut')])
 
 // Print Bulbahhhh!!!!!
-
+// bulbasaur.sound()
 
 
 // Add a height of 7 to bulbasaur using the dot notation. (Don't change bulbasaur object manually)
-
+bulbasaur.height = 7
+// console.log(bulbasaur.height)
 
 
 // Add a property called order and assign it a value of 1 using the square brackets. (Don't change bulbasaur object manually)
-
-
+bulbasaur['order'] = 1
+// console.log(bulbasaur.order)
 
 // Print an array that contains every single properties in bulbasaur
-
-
+const string = 'bulbasaur'
+const array = string.split('') // here you want no space between '' this will split up characters/letters, ' ' space will split there space is so that is words
+// console.log(array)
 
 // Print every single properties one by one in the console
-
+console.log(bulbasaur([]))
 
 
 // Print an array that contains every single values in bulbasaur
-
+bulbasaur[]
 
 ////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////  THE END  //////////////////////////////////////
